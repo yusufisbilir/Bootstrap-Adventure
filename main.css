@@ -1,1 +1,6 @@
-/* No CSS *//*# sourceMappingURL=main.css.map */
+@media (min-width: 768px) {
+  .news-input {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=main.css.map */
