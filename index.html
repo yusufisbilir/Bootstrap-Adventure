@@ -18,6 +18,12 @@
             href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
         />
 
+        <!-- Mapbox -->
+        <link
+            href="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css"
+            rel="stylesheet"
+        />
+
         <!-- Css -->
         <link rel="stylesheet" href="main.css" />
     </head>
@@ -566,11 +572,62 @@
             </div>
         </section>
 
+        <!-- Contact -->
+        <section class="p-5">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-md">
+                        <h2 class="text-center mb-4">Contact Info</h2>
+                        <ul class="list-group list-group-flush lead">
+                            <li class="list-group-item">
+                                <span class="fw-bold">Main Location:</span> 50
+                                Main st Boston MA
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Enrollment Phone:</span>
+                                (555) 555-5555
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Student Phone:</span>
+                                (333) 333-3333
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Enrollment Email:</span>
+                                (555) enroll@frontendbc.test
+                            </li>
+                            <li class="list-group-item">
+                                <span class="fw-bold">Student Email:</span>
+                                student@frontendbc.test
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md">
+                        <div id="map"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Bootstrap -->
         <script
             src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
             crossorigin="anonymous"
         ></script>
+
+        <!-- Mapbox -->
+        <script src="https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js"></script>
+
+        <div id="map" style="width: 400px; height: 300px"></div>
+        <script>
+            mapboxgl.accessToken =
+                "pk.eyJ1IjoieXVzdWZpc2JpbGlyIiwiYSI6ImNrcWUyeXg1ejBqeXAyd3BocmcyM2QxY3UifQ.SPqMLt5cjDnQUkIxhk5N2g";
+            var map = new mapboxgl.Map({
+                container: "map",
+                style: "mapbox://styles/mapbox/streets-v11",
+                center: [39.1864412496766, 34.88837097859903],
+                zoom: 2,
+            });
+        </script>
     </body>
 </html>
